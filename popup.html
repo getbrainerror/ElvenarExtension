@@ -1,0 +1,54 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>My Page</title>
+  </head>
+  <link href="popup.css" rel="stylesheet" type="text/css" />
+  <script type="module" src="popup.js"></script>
+
+  <header class="error">Unknown error</header>
+  <div class="container", id="popup-container">
+      <h1 class="title" id="ad-title">Par là, je regarde vos pubs:</h1>
+
+      <div class="ads-container" id="all-ads">
+        <div class="ad-type" id="ad-template">
+          <div class="ad-header">
+            <h1 class="ad-title">Template</h1>
+            <p class="message ad-message">???</p>
+          </div>
+          <div class="options-container">
+            <div class="option select-bonus-container">
+              <label for="template-choice" class="option-label">bénéficiaire</label>
+              <select class="select-bonus" name="template-choice"></select>
+            </div>
+            <div class="option select-amount-container">
+              <label for="template-amount" class="option-label">quantité</label>
+              <select class="select-amount" name="template-amount"></select>
+            </div>
+          </div>
+          <button class="play-button" id="template-play">
+            <img src="assets/play.png" class="play-icon">
+          </button> 
+        </div>
+      </div>
+
+      <div class="neighbour-container", id="neighbour-container">
+        <h1 class="title" id="neighbour-title">Par ici, j'aide vos voisins:</h1>
+        <p class="message" id="neighbour-count"></p>
+        <p class="message warning" id="neighbour-warning">Je ne peux pas tous les faire, vos coffres seront pleins!</p>
+        <button class="neighbour-button" id="neighbour-button">
+          <img src="assets/neighbourlyHelp.png"></img>
+        </button>
+      </div>
+  </div>
+  <div class="background-screen loading active" id="loadingScreen">
+    <img src="assets/initializeLoadingScreen.png" id="loadingImage"></img>
+  </div>
+  <div class="bottom-message loading" id="treasure-message">
+    <h1 class="message-header" id="treasure-header">J'ai trouvé des trésors !</h1>
+    <div class="message-content-container" id="treasure-container"></div>
+    <button class="message-button" id="treasure-button">
+      <img class="message-button-icon", id="treasure-button-icon", src="assets\ok_button_bronze.png"></img>
+    </button>
+  </div>
+</html>

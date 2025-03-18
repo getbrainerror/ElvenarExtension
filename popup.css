@@ -1,0 +1,207 @@
+body {
+  background-color: #f7f7e9;
+}
+
+.container {
+  width: 400px;
+  min-height: 550px;
+  color: #314d3e;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  height: fit-content;
+  width: fit-content;
+  font-size: 16px;
+  font-weight: bold;
+  align-self: center;
+  margin: 8px;
+}
+
+
+.ads-container {
+  padding: 3px;
+}
+
+.ad-type {
+  display: flex;
+  flex-direction: column;
+  border-bottom-color: #00254d;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-top-color: #00254d;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-radius: 0.8rem;
+  padding: 5px;
+  padding-bottom: 7px;
+  margin-bottom: 7px;
+  padding-top: 7px;
+  background-color: white;
+}
+
+.ad-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.message {
+  font-size: 14px;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  padding-bottom: 10px;
+  justify-content: space-evenly;
+}
+
+.option {
+  min-width: 100px;
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.option-label {
+  align-self: center;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.play-button {
+  margin-right: 10px;
+  align-self: end;
+  cursor: pointer;
+  background-color: white;
+  border-width: 0px;
+}
+
+.neighbour-button{
+  cursor: pointer;
+  border-width: 0px;
+}
+
+
+.play-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.neighbour-container {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+#neighbour-title {
+  margin-bottom: 5px;
+}
+
+.background-screen {
+  position: absolute; /* Cover the entire popup */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #000;
+  z-index: 100; /* Ensure it's on top of other elements */
+}
+
+#loadingImage {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Ensure the entire image is visible */
+}
+
+.bottom-message {
+  position: fixed;
+  width: 100%;
+  min-height: 150px;
+  bottom: 0;
+  left: 0;
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none; /* hide it by default */
+  z-index: 10000; /* Ensure it's on top of other elements including loading screen */
+  background-image: url("assets/scrollBackground.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-family: 'MedievalSharp', cursive; 
+}
+
+/* .message-background{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+} */
+
+#treasure-header {
+  margin-top: 15px;
+  margin-bottom: 4px;
+  font-size: 17px;
+}
+
+.message-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-button {
+  width: fit-content;
+  height: fit-content;
+  margin-left: 20px;
+  align-self: center;
+  margin-bottom: 20px;
+  border-width: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.message-button-icon {
+  width: auto;
+  height: 40;
+}
+
+/* these 3 blocks handle the display of loading and warning elements */
+.loading, .warning, .error {
+  display: none; /* hidden by default */
+}
+
+.warning {
+  color: orangered;
+}
+
+.error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 10000;
+  background-color: red;
+  color: white;
+  font-size: 18px;
+}
+
+.active {
+  display: flex; /* shown when active */
+} 
+
+

@@ -1,0 +1,37 @@
+{
+    "name": "Elvenar Helper",
+    "version": "0.1.0",
+    "description": "Sparing you the pain of listening to MVs seemingly made by your 8-year-old cousin. The one who stuck a whole chicken wing up his nose on last christmas' eve.",	
+    "permissions": ["storage", "tabs", "activeTab", "scripting"],
+    "host_permissions": ["https://*.elvenar.com/*"],
+    "background": {
+      "matches": ["https://*.elvenar.com/game*"],
+      "service_worker": "background.js",
+      "type": "module"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.elvenar.com/game*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "assets/*",
+          "injectedScript.js"
+        ],
+        "matches": ["https://*.elvenar.com/*"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "assets/favicon.ico",
+        "24": "assets/favicon.ico",
+        "32": "assets/favicon.ico"
+      },
+      "default_title": "Elvenar Helper",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}
