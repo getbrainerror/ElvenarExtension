@@ -114,7 +114,7 @@ function parseResearchData(userData, staticData){
   for (let [techId, [parents, maxSP]] of Object.entries(staticData)){
     if ( (!userData[techId] || !userData[techId]?.[0]) && 
     (!parents || ( parents.every((p) => userData[p]) && parents.every((p)=>userData[p][0]) ) ) ) {
-      if (techId !== "humans_root"){
+      if (techId.split("_").slice(-1)[0] !== "root"){
         currentResearch.push(techId);
       }
     }
